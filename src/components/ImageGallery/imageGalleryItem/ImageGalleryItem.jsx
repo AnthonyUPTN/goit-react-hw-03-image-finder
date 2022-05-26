@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import s from './imageGalleryItem.module.css';
 
 function ImageGalleryItem({ data, onClick }) {
-  const elements = data.map(({ id, webformatURL, largeImageURL }) => {
+  const elements = data.map(({ id, webformatURL, largeImageURL, tag }) => {
     return (
       <li
         className={s.galleryItem}
         key={id}
-        onClick={() => onClick({ largeImageURL })}
+        onClick={() => onClick({ largeImageURL, tag })}
       >
-        <img className={s.itemImage} src={webformatURL} alt="picture" />
+        <img className={s.itemImage} src={webformatURL} alt={tag} />
       </li>
     );
   });

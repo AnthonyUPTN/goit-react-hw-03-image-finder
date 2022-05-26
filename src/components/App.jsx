@@ -93,7 +93,11 @@ class App extends Component {
         )}
         {isModalOpen && (
           <Modal onClose={closeModal}>
-            <img src={modalBody.largeImageURL} alt="picture" width="800" />
+            <img
+              src={modalBody.largeImageURL}
+              alt={modalBody.tag}
+              width="800"
+            />
           </Modal>
         )}
       </>

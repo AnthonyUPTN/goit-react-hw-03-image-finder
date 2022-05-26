@@ -51,6 +51,7 @@ class App extends Component {
     this.setState({
       q,
       page: 1,
+      images: [],
     });
   };
 
